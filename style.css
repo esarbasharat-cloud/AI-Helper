@@ -1,0 +1,372 @@
+
+/* ==========================================
+   AI HELPER 2.0 — LIQUID GLASS EDITION
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --cream: #F5F1E8;
+    --ink: #25251F;
+    --muted: #77756D;
+    --glass: rgba(255,255,255,0.48);
+    --glass-border: rgba(255,255,255,0.85);
+}
+
+/* Main background */
+.stApp {
+    background:
+        radial-gradient(ellipse at 15% 10%, rgba(255,255,255,.95), transparent 38%),
+        radial-gradient(ellipse at 90% 35%, rgba(216,224,210,.55), transparent 35%),
+        linear-gradient(135deg, #F5F1E8, #EDE9DF 55%, #F8F5EF);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+header[data-testid="stHeader"] {
+    background: rgba(245,241,232,.45);
+    backdrop-filter: blur(20px);
+}
+
+/* Main layout */
+.block-container {
+    max-width: 1050px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--ink);
+    letter-spacing: -0.045em;
+    font-family: 'Inter', sans-serif;
+}
+
+p, label, span {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Glass text areas */
+.stTextArea textarea {
+    background: rgba(255,255,255,.48) !important;
+    color: var(--ink) !important;
+    border: 1px solid rgba(255,255,255,.9) !important;
+    border-radius: 24px !important;
+    padding: 20px !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.95),
+        0 12px 35px rgba(65,55,35,.07),
+        0 3px 8px rgba(65,55,35,.04);
+    transition: all .3s ease;
+}
+
+.stTextArea textarea:focus {
+    border-color: rgba(255,255,255,1) !important;
+    box-shadow:
+        0 0 0 3px rgba(255,255,255,.45),
+        0 15px 40px rgba(65,55,35,.10);
+}
+
+/* Liquid glass buttons */
+.stButton button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.88),
+        rgba(255,255,255,.38)
+    ) !important;
+    color: var(--ink) !important;
+    border: 1px solid rgba(255,255,255,.95) !important;
+    border-radius: 999px !important;
+    padding: .8rem 1.5rem !important;
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,1),
+        0 7px 18px rgba(60,50,30,.07),
+        0 2px 5px rgba(60,50,30,.04);
+    transition: all .3s ease !important;
+}
+
+.stButton button:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,.95) !important;
+    box-shadow:
+        inset 0 1px 3px white,
+        0 14px 28px rgba(60,50,30,.12);
+}
+
+.stButton button:active {
+    transform: translateY(0) scale(.98);
+}
+
+/* Glass containers */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(255,255,255,.35);
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 26px;
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.9),
+        0 12px 30px rgba(60,50,30,.06);
+}
+
+/* Input focus */
+div[data-baseweb="textarea"] {
+    border-radius: 24px;
+}
+
+/* Dividers */
+hr {
+    border-color: rgba(100,90,70,.12);
+}
+
+/* Smooth transitions */
+.stMarkdown,
+.stTextArea,
+.stButton {
+    transition: all .3s ease;
+}
+
+/* Selection */
+::selection {
+    background: rgba(170,185,160,.4);
+    color: #25251F;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(120,115,100,.3);
+    border-radius: 20px;
+}
+
+
+/* =================================
+   PREMIUM LIQUID GLASS INPUT
+   ================================= */
+
+.stTextArea [data-baseweb="textarea"] > div {
+    position: relative !important;
+    overflow: hidden !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.82),
+            rgba(255,255,255,0.38) 45%,
+            rgba(238,239,230,0.35)
+        ) !important;
+
+    border: 1px solid rgba(255,255,255,0.95) !important;
+    border-radius: 28px !important;
+
+    backdrop-filter: blur(35px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(35px) saturate(160%) !important;
+
+    box-shadow:
+        inset 0 2px 3px rgba(255,255,255,0.95),
+        inset 0 -1px 2px rgba(180,170,150,0.12),
+        0 2px 5px rgba(255,255,255,0.7),
+        0 12px 30px rgba(70,60,40,0.08),
+        0 25px 55px rgba(70,60,40,0.045) !important;
+
+    transition: all 0.35s ease !important;
+}
+
+/* Remove the old flat textarea appearance */
+.stTextArea textarea {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 28px !important;
+    padding: 22px !important;
+}
+
+/* Gentle illuminated hover */
+.stTextArea [data-baseweb="textarea"] > div:hover {
+    border-color: rgba(255,255,255,1) !important;
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,1),
+        0 15px 38px rgba(70,60,40,0.10),
+        0 28px 60px rgba(70,60,40,0.07) !important;
+
+    transform: translateY(-2px);
+}
+
+/* Focused glass */
+.stTextArea [data-baseweb="textarea"] > div:focus-within {
+    border-color: rgba(255,255,255,1) !important;
+
+    box-shadow:
+        inset 0 2px 4px white,
+        0 0 0 3px rgba(255,255,255,0.35),
+        0 18px 45px rgba(70,60,40,0.12) !important;
+}
+
+/* Smooth transitions */
+.stTextArea textarea,
+.stTextArea [data-baseweb="textarea"] > div {
+    transition: all 0.35s ease !important;
+}
+
+
+
+/* AI HELPER — 3D FLOATING LIQUID GLASS INPUT */
+
+.stTextArea div[data-baseweb="textarea"] {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px !important;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.88),
+        rgba(255,255,255,0.38)
+    ) !important;
+    border: 1px solid rgba(255,255,255,0.95) !important;
+    box-shadow:
+        0 18px 35px rgba(70,60,40,0.10),
+        0 5px 12px rgba(70,60,40,0.06),
+        inset 0 2px 3px rgba(255,255,255,0.95),
+        inset 0 -2px 5px rgba(100,90,70,0.04) !important;
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stTextArea div[data-baseweb="textarea"]:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 24px 42px rgba(70,60,40,0.13),
+        0 8px 16px rgba(70,60,40,0.07),
+        inset 0 2px 4px rgba(255,255,255,1) !important;
+}
+
+.stTextArea div[data-baseweb="textarea"]:focus-within {
+    transform: translateY(-2px);
+    border-color: rgba(130,120,95,0.45) !important;
+    box-shadow:
+        0 20px 40px rgba(70,60,40,0.13),
+        0 0 0 3px rgba(160,145,110,0.10),
+        inset 0 2px 4px rgba(255,255,255,1) !important;
+}
+
+.stTextArea textarea {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes glass-idle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+.stTextArea div[data-baseweb="textarea"] {
+    animation: glass-idle-float 5s ease-in-out infinite;
+}
+
+.stTextArea div[data-baseweb="textarea"]:hover,
+.stTextArea div[data-baseweb="textarea"]:focus-within {
+    animation: none;
+}
+
+
+
+/* MAIN QUESTION BOX — PREMIUM 3D GLASS */
+
+/* Target only the text area with key main_question_box */
+div[data-testid="stTextArea"]:has(textarea[aria-label="main_question_box"]),
+div[data-testid="stTextArea"]:has(textarea[placeholder*="How much money"]) {
+    position: relative;
+}
+
+div[data-testid="stTextArea"]:has(textarea[aria-label="main_question_box"]) > div,
+div[data-testid="stTextArea"]:has(textarea[placeholder*="How much money"]) > div {
+    border-radius: 24px !important;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.96),
+        rgba(255,255,255,0.48)
+    ) !important;
+    border: 1px solid rgba(255,255,255,0.95) !important;
+    box-shadow:
+        0 22px 40px rgba(65,55,35,0.13),
+        0 7px 14px rgba(65,55,35,0.07),
+        inset 0 2px 4px rgba(255,255,255,1),
+        inset 0 -3px 8px rgba(100,90,70,0.05) !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    transition: all 0.35s ease !important;
+}
+
+div[data-testid="stTextArea"]:has(textarea[aria-label="main_question_box"]):hover > div,
+div[data-testid="stTextArea"]:has(textarea[placeholder*="How much money"]):hover > div {
+    transform: translateY(-4px);
+    box-shadow:
+        0 28px 48px rgba(65,55,35,0.16),
+        0 10px 18px rgba(65,55,35,0.08),
+        inset 0 2px 5px white !important;
+}
+
+div[data-testid="stTextArea"]:has(textarea[aria-label="main_question_box"]):focus-within > div,
+div[data-testid="stTextArea"]:has(textarea[placeholder*="How much money"]):focus-within > div {
+    border-color: rgba(145,130,100,0.5) !important;
+    box-shadow:
+        0 24px 45px rgba(65,55,35,0.15),
+        0 0 0 3px rgba(160,145,110,0.12),
+        inset 0 2px 5px white !important;
+}
+
+div[data-testid="stTextArea"]:has(textarea[aria-label="main_question_box"]) textarea,
+div[data-testid="stTextArea"]:has(textarea[placeholder*="How much money"]) textarea {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* AI HELPER — PREMIUM MATHEMATICAL ANSWER CARD */
+.st-key-answer_card {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.94),
+        rgba(242, 247, 244, 0.88)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    padding: 1.35rem 1.5rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.5rem;
+    box-shadow:
+        0 14px 35px rgba(35, 55, 45, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.st-key-answer_card h3 {
+    color: #203b30;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 1rem;
+}
+
+.st-key-answer_card [data-testid="stMarkdownContainer"] p,
+.st-key-answer_card [data-testid="stMarkdownContainer"] li {
+    color: #34483e;
+    line-height: 1.75;
+}
+
+.st-key-answer_card [data-testid="stMarkdownContainer"] strong {
+    color: #1d382c;
+}
